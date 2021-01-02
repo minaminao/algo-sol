@@ -13,9 +13,12 @@ contract TestGCD {
         uint256 x = 100;
         Assert.equal(x.gcd(10), 10, "gcd(100,10)=10");
         Assert.equal(x.gcd(70), 10, "gcd(100,70)=10");
+    }
 
+    function testGCDloop() public {
         Assert.equal(GCD.gcd_loop(3, 5), 1, "gcd_loop(3,5)=1");
         Assert.equal(GCD.gcd_loop(4, 6), 2, "gcd_loop(4,6)=2");
+        uint256 x = 100;
         Assert.equal(x.gcd_loop(10), 10, "gcd_loop(100,10)=10");
         Assert.equal(x.gcd_loop(70), 10, "gcd_loop(100,70)=10");
     }
